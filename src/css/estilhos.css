@@ -1,0 +1,154 @@
+body {
+    font-family: 'Roboto Slab';
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.cabecalho .logo {
+    width: 250px;
+}
+
+.cabecalho .menu {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.cabecalho nav li a {
+    font-weight: bolder;
+    color: white;
+    font-size: 18px;
+    padding: 10px 10px;
+    border-radius: 50px;
+    transition: 0,5s;
+}
+
+.cabecalho nav li a:hover {
+    background-color: rgb(255, 0, 64)
+}
+
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 200px);
+    padding: 0 10px 10px;
+
+}
+
+.container div h1 {
+    color: white;
+    width: 100%;
+    font-weight: lighter;
+}
+
+.container .imagem-titulo {
+    max-width: 350px;
+}
+.container .descricao {
+    color: white;
+    width: 100%;
+    font-size: 15px;
+    margin: 20px 0;
+}
+
+.container .botao-trailer {
+    background-color: rgb(255, 0, 76);
+    color: white;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    transition: 0.5s all ease-in-out;
+}
+
+.container .botao-trailer:hover {
+    transform: scale(1.1);
+}
+
+.container img {
+    max-width: 400px;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+
+}
+
+.fundo-video {
+    background-color: red;
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.fundo-video .video {
+    height: 100vh;
+}
+
+.fundo-video::after {
+    content: "";
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.9756493506493507) 20%, rgba(122, 109, 109, 0) 50%, rgba(0, 0, 0, 0.9837662337662337) 81%);
+}
+.modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(52,52,50,0.749);
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+.conteudo-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    border-radius: 5px;
+    gap: 15px;
+}
+.fechar-modal {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    width: 30px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+
+}
+
+.modal iframe {
+    border-width: 0;
+    width: 560px;
+    height: 260px;
+
+}
+
+.modal.aberto {
+    opacity: 1;
+    visibility: visible;
+}
